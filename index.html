@@ -17,17 +17,20 @@ font-family:Arial;
 }
 
 body{
-
+margin:0;
+width:100vw;
 height:100vh;
-
 display:flex;
 justify-content:center;
 align-items:center;
-
-background:#111;
-
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+overflow:hidden;
+touch-action:none;
+position:fixed;
+user-select:none;
+-webkit-user-select:none;
+-webkit-touch-callout:none;
 }
-
 #score{
 
 position:absolute;
@@ -53,40 +56,6 @@ border-radius:10px;
 
 }
 
-#controls{
-
-position:absolute;
-
-bottom:30px;
-
-text-align:center;
-
-}
-
-#controls button{
-
-width:45px;
-
-height:45px;
-
-margin:3px;
-
-font-size:22px;
-
-border-radius:10px;
-
-border:none;
-
-background:#00ff88;
-
-}
-
-#controls button:active{
-
-transform:scale(0.9);
-
-}
-
 </style>
 
 </head>
@@ -100,18 +69,6 @@ Score: 0
 
 
 <canvas id="game" width="600" height="600"></canvas>
-
-<div id="controls">
-
-<button onclick="direction='UP'">⬆️</button>
-
-<div>
-<button onclick="direction='LEFT'">⬅️</button>
-<button onclick="direction='DOWN'">⬇️</button>
-<button onclick="direction='RIGHT'">➡️</button>
-</div>
-
-</div>
 
 <script>
 
